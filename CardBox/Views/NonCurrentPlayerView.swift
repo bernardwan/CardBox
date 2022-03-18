@@ -32,7 +32,7 @@ struct NonCurrentPlayerView: View {
                 }
             }
             Button {
-                gameRunnerViewModel.nextPlayer()
+                gameRunnerViewModel.onEndTurn()
             } label: {
                 Text("Next")
                     .font(.title)
