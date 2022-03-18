@@ -11,9 +11,9 @@ struct PlayerView: View {
     private var playerViewModel: PlayerViewModel
     @EnvironmentObject var gameRunnerViewModel: GameRunner
 
-//    init(player: Player) {
-//        self.playerViewModel = PlayerViewModel(player: player)
-//    }
+    init(player: Player) {
+        self.playerViewModel = PlayerViewModel(player: player)
+    }
 
     init(playerViewModel: PlayerViewModel) {
         self.playerViewModel = playerViewModel
