@@ -16,7 +16,10 @@ struct ExplodingKittensUtils {
     static let actionCards: Set<ExplodingKittensCardType> = [
         .seeTheFuture,
         .shuffle,
-        .skip
+        .skip,
+        .favor,
+        .attack,
+        .nope
     ]
     static var playableCards: Set<ExplodingKittensCardType> {
         nonActionCards.union(actionCards)

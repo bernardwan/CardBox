@@ -18,6 +18,9 @@ class GameRunner: GameRunnerReadOnly, GameRunnerInitOnly, GameRunnerUpdateOnly, 
     @Published internal var isShowingDeckPositionRequest = false
     internal var deckPositionRequestArgs: DeckPositionRequestArgs?
 
+    @Published internal var isShowingPlayerHandPositionRequest = false
+    internal var playerHandPositionRequestArgs: PlayerHandPositionRequestArgs?
+
     private var onSetupActions: [Action]
     private var onStartTurnActions: [Action]
     private var onEndTurnActions: [Action]
@@ -119,6 +122,29 @@ class GameRunner: GameRunnerReadOnly, GameRunnerInitOnly, GameRunnerUpdateOnly, 
 
         ActionDispatcher.runAction(
             DeckPositionResponseAction(card: args.card, player: args.player, offsetFromTop: offsetFromTop),
+            on: self
+        )
+    }
+
+    func showPlayerHandPositionRequest() {
+        self.isShowingPlayerHandPositionRequest = true
+    }
+
+    func hidePlayerHandPositionRequest() {
+        self.isShowingPlayerHandPositionRequest = false
+    }
+
+    func setPlayerHandPositionRequestArgs(_ args: PlayerHandPositionRequestArgs) {
+        self.playerHandPositionRequestArgs = args
+    }
+
+    func dispatchPlayerHandPositionResponse(index: Int) {
+        guard let args = playerHandPositionRequestArgs else {
+            return
+        }
+
+        ActionDispatcher.runAction(
+            PlayerHandPositionResponseAction(targetPlayer: args.targetPlayer, player: args.player, index: index),
             on: self
         )
     }
