@@ -88,6 +88,8 @@ class GameRunner: GameRunnerReadOnly, GameRunnerInitOnly, GameRunnerUpdateOnly, 
         ActionDispatcher.runAction(EndTurnAction(), on: self)
     }
 
+    // Exploding kitten related requests and responses
+
     func showDeckPositionRequest() {
         self.isShowingDeckPositionRequest = true
     }

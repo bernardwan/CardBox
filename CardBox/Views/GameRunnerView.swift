@@ -31,7 +31,7 @@ struct GameRunnerView: View {
                     .scaleEffect(1.5)
             }
             if gameRunnerViewModel.isShowingDeckPositionRequest {
-                DeckPositionView()
+                DeckPositionRequestView()
             }
         }.environmentObject(gameRunnerViewModel)
     }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D007F2A27E24BA300F0E359 /* DeckPositionResponseAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F2927E24BA300F0E359 /* DeckPositionResponseAction.swift */; };
-		2D007F3627E24CF700F0E359 /* DeckPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F3527E24CF700F0E359 /* DeckPositionView.swift */; };
+		2D007F3627E24CF700F0E359 /* DeckPositionRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F3527E24CF700F0E359 /* DeckPositionRequestView.swift */; };
 		2D007F4927E331D800F0E359 /* PlayerPlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F4827E331D800F0E359 /* PlayerPlayCondition.swift */; };
 		2D007F4E27E3338000F0E359 /* ExplodingKittensPlayerPlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F4D27E3338000F0E359 /* ExplodingKittensPlayerPlayCondition.swift */; };
 		2D007F5427E3376600F0E359 /* IsCurrentPlayerPlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D007F5327E3376600F0E359 /* IsCurrentPlayerPlayCondition.swift */; };
@@ -122,7 +122,7 @@
 
 /* Begin PBXFileReference section */
 		2D007F2927E24BA300F0E359 /* DeckPositionResponseAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPositionResponseAction.swift; sourceTree = "<group>"; };
-		2D007F3527E24CF700F0E359 /* DeckPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPositionView.swift; sourceTree = "<group>"; };
+		2D007F3527E24CF700F0E359 /* DeckPositionRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPositionRequestView.swift; sourceTree = "<group>"; };
 		2D007F4827E331D800F0E359 /* PlayerPlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlayCondition.swift; sourceTree = "<group>"; };
 		2D007F4D27E3338000F0E359 /* ExplodingKittensPlayerPlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplodingKittensPlayerPlayCondition.swift; sourceTree = "<group>"; };
 		2D007F5327E3376600F0E359 /* IsCurrentPlayerPlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCurrentPlayerPlayCondition.swift; sourceTree = "<group>"; };
@@ -270,6 +270,14 @@
 			children = (
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		2D0080BD27E5B2E800F0E359 /* ExplodingKittensRequestViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D007F3527E24CF700F0E359 /* DeckPositionRequestView.swift */,
+			);
+			path = ExplodingKittensRequestViews;
 			sourceTree = "<group>";
 		};
 		2DA04F2627DADD500063D952 = {
@@ -467,13 +475,13 @@
 		2DA0509727DC9EA50063D952 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D0080BD27E5B2E800F0E359 /* ExplodingKittensRequestViews */,
 				2DA0509D27DC9F780063D952 /* GameRunnerView.swift */,
 				2DA050AC27DE5D570063D952 /* CardView.swift */,
 				4589AB1B27E14AF3005FDA07 /* DeckView.swift */,
 				4589AB1727DF3C5F005FDA07 /* PlayerHandView.swift */,
 				2DA050B627DE5EC70063D952 /* PlayerView.swift */,
 				4589AB1327DF2946005FDA07 /* MainMenuView.swift */,
-				2D007F3527E24CF700F0E359 /* DeckPositionView.swift */,
 				68466A8E27E5061B000387B6 /* CurrentPlayerView.swift */,
 				68466A9027E506C2000387B6 /* NonCurrentPlayerView.swift */,
 				68466A9227E5076A000387B6 /* GameActionsView.swift */,
@@ -722,7 +730,7 @@
 				2D007F4927E331D800F0E359 /* PlayerPlayCondition.swift in Sources */,
 				4E18ED0827DF2A5300458D0A /* PlayerDiscardCardEvent.swift in Sources */,
 				2DA0507E27DC9AB60063D952 /* SetGameStateEvent.swift in Sources */,
-				2D007F3627E24CF700F0E359 /* DeckPositionView.swift in Sources */,
+				2D007F3627E24CF700F0E359 /* DeckPositionRequestView.swift in Sources */,
 				2D007F2A27E24BA300F0E359 /* DeckPositionResponseAction.swift in Sources */,
 				2DA0505D27DC4C1F0063D952 /* DisplayMessageEvent.swift in Sources */,
 				2DA0514C27E23E7A0063D952 /* DeckPositionRequestEvent.swift in Sources */,

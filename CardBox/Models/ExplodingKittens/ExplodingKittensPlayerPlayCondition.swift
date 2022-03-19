@@ -6,20 +6,6 @@
 //
 
 struct ExplodingKittensPlayerPlayCondition: PlayerPlayCondition {
-    let nonActionCards: Set<ExplodingKittensCardType> = [
-        .random1,
-        .random2,
-        .random3
-    ]
-    let actionCards: Set<ExplodingKittensCardType> = [
-        .seeTheFuture,
-        .shuffle,
-        .skip
-    ]
-    var playableCards: Set<ExplodingKittensCardType> {
-        nonActionCards.union(actionCards)
-    }
-
     func evaluate(gameRunner: GameRunnerReadOnly, args: PlayerPlayConditionArgs) -> Bool {
         let cards = args.cards
 
@@ -33,7 +19,7 @@ struct ExplodingKittensPlayerPlayCondition: PlayerPlayCondition {
             guard let cardType = ExplodingKittensUtils.getCardType(card: card) else {
                 return false
             }
-            return actionCards.contains(cardType)
+            return ExplodingKittensUtils.actionCards.contains(cardType)
         }
 
         if cards.count == 2 || cards.count == 3 {

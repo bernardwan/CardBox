@@ -1,5 +1,5 @@
 //
-//  DeckPositionView.swift
+//  DeckPositionRequestView.swift
 //  CardBox
 //
 //  Created by mactest on 16/03/2022.
@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct DeckPositionView: View {
+struct DeckPositionRequestView: View {
     @State private var position: Int = 0
     @EnvironmentObject var gameRunnerViewModel: GameRunner
 
     var minusButton: some View {
         Button(action: {
-            self.position -= 1
+            if self.position > 0 {
+                self.position -= 1
+            }
         }) {
             Text("-")
         }
@@ -21,7 +23,9 @@ struct DeckPositionView: View {
 
     var addButton: some View {
         Button(action: {
-            self.position += 1
+            if self.position < gameRunnerViewModel.deck.count - 1 {
+                self.position += 1
+            }
         }) {
             Text("+")
         }
@@ -36,6 +40,7 @@ struct DeckPositionView: View {
 
     var messageBox: some View {
         VStack {
+            Text("Select new position to put card in deck")
             HStack {
                 minusButton
                 Text(position.description)
